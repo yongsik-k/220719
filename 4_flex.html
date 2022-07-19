@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .wrapper {
+        /* display flex가 없을때는 세로로 정렬되는데, flex하면 가로로 정렬된다.(디폴트)
+    세로로 정렬하고 싶으면 flex-direction : column; 하면 된다. 만약 reverse를 사용하면 아래에서부터 정렬이 된다.
+    */
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        height: 300px;
+        /* baseline은 요소의 시작위치*/
+        align-items: center;
+      }
+
+      .box {
+        /* 하기의 블럭 세개를 맘대로 정리하는것이 이 실습의 핵심 */
+        width: 80px;
+        height: 80px;
+        border: 1px solid blue;
+        background-color: red;
+      }
+      /* 이렇게 .a, .b, .c이런데 이후에 flex:숫자 여기서 숫자는 비율이야. */
+      .a {
+        flex: 1;
+        background-color: red;
+      }
+      .b {
+        flex: 3;
+        background-color: green;
+      }
+      .c {
+        flex: 2;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box a"></div>
+      <div class="box b"></div>
+      <div class="box c"></div>
+    </div>
+  </body>
+</html>

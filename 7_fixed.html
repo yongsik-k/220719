@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test1,
+      .test2 {
+        border: 1px solid black;
+      }
+
+      .container {
+        height: 1200px;
+        border: 10px solid red;
+      }
+      .test1 {
+        /* fixed는 무조건 저 위치를 고정하라는 뜻이야 inline형태야 부모 입장에서 시작점에서 시작한다.
+fixed를 지정하게 되면 아예 다른 영역으로 바뀌게 된다는 뜻으로 생각해. 평행한 평면이 있을때 아래평면에 있다가 윗평면에 있어서 항상 display된다고 생각해
+ 즉, 부모의 영향을 받지 않고 화면 창에 붙어있어, 독립적인다.*/
+        position: fixed;
+        /* width: 100%; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="test1">test1</div>
+      <div class="test2">test2</div>
+    </div>
+  </body>
+</html>
